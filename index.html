@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="serviceworker" href="serviceworker.js">
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <div> 
+            <h1>Serviceworker bonjour</h1>
+        </div>
+        <script>
+            if(navigator.serviceWorker){
+                navigator.serviceWorker.register('serviceworker.js')
+                .then( (enregistrement)=> {
+                    console.log("enregistrement OK ", enregistrement.scope)
+                })
+                .catch((error)=>{
+                    console.error("fail !", error)
+                })
+            }
+        </script>
+    </body>
+</html>
