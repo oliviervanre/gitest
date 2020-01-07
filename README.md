@@ -7,6 +7,6 @@ j'ai créé ce petit site simpliste en vue de réaliser une progressive web app.
 
 Cette PWA devrait comporter 2 pages à mettre en cache, et une page offline. 
 
-Cela me permet également de revoir le fonctionnement de Git et Github. 
+Ce dépôt me permet également de revoir le fonctionnement de Git et Github. 
 
 
