@@ -15,7 +15,7 @@
             if(navigator.serviceWorker){
                 navigator.serviceWorker.register('serviceworker.js')
                 .then( (enregistrement)=> {
-                    console.log("enregistrement OK ", enregistrement.scope)
+                    console.log("enregistrement OK, scope : ", enregistrement.scope)
                 })
                 .catch((error)=>{
                     console.error("fail !", error)
