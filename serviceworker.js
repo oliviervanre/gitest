@@ -49,7 +49,7 @@ addEventListener('fetch', fetchEvent => {
                 console.log('cache !')
                 return responseFromCache
             }
-            console.log('pas cache' + request.url)
+            console.log('pas cache : ' + request.url)
             return fetch(request)
             .catch( error => {
                 return caches.match('/offline.html')

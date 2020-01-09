@@ -12,7 +12,7 @@
             <h1>Serviceworker avec GIT 3 domicile bonjour- test pwa hors ligne</h1>
         </div>
         <script>
-            if(navigator.serviceWorker){
+ /*            if(navigator.serviceWorker){
                 navigator.serviceWorker.register('serviceworker.js')
                 .then( (enregistrement)=> {
                     console.log("enregistrement OK, scope : ", enregistrement.scope)
@@ -20,7 +20,17 @@
                 .catch((error)=>{
                     console.error("fail !", error)
                 })
-            }
-        </script>
+            } */
+            if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('serviceworker.js')
+                .then(registration => {
+                    console.log('Registration successful with scope: ', registration.scope)
+                }).catch(err => {
+                    console.log('Registration failed: ', err)
+                })
+            })
+        }      
+ </script>
     </body>
 </html>
