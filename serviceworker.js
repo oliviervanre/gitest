@@ -11,6 +11,7 @@ addEventListener('install', (installEvent)=>{
                 'assets/font.txt', 
                 'assets/icon.txt'
             ])
+            console.log('mise en cache des fichiers, SW installé dans la version ' + version)
             // fichiers à mettre impérativement en cache
             return staticCache.addAll([
                 'css/stylesheet.css',
