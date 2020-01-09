@@ -9,13 +9,13 @@
     </head>
     <body>
         <div> 
-            <h1>Serviceworker avec GIT 2 bonjour</h1>
+            <h1>Serviceworker avec GIT 2 service bonjour</h1>
         </div>
         <script>
             if(navigator.serviceWorker){
                 navigator.serviceWorker.register('serviceworker.js')
                 .then( (enregistrement)=> {
-                    console.log("enregistrement OK ", enregistrement.scope)
+                    console.log("enregistrement OK, scope : ", enregistrement.scope)
                 })
                 .catch((error)=>{
                     console.error("fail !", error)
