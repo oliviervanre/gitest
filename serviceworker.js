@@ -1,6 +1,6 @@
 const version = 'V0.2'
 const staticCacheName = version + 'staticfiles'
-addEventListener('install', (installEvent) => {
+self.addEventListener('install', (installEvent) => {
     console.log('Le service worker est en installation...')
     skipWaiting()
     installEvent.waitUntil(
