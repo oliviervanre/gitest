@@ -1,0 +1,17 @@
+{
+    "short_name": "Gitest",
+    "name": "Gitest",
+    "start_url": "./?utm_source=pwa",
+    "scope": "./",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "France-icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "background_color": "#003366",
+    "theme_color": "#AA2244"
+  }
+  

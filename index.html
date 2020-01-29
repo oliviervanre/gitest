@@ -4,34 +4,19 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="serviceworker" href="serviceworker.js">
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="manifest" href="manifest.json">
     </head>
     <body>
         <div> 
             <h1>Serviceworker avec GIT 4 test offline</h1>
+            <section id="installation">
+                <h2>Installation</h2>
+                <p>
+                  <button disabled>Installer la PWA</button>
+                </p>
+              </section>
         </div>
-        <script>
-            if(navigator.serviceWorker){
-                navigator.serviceWorker.register('serviceworker.js')
-                .then( (enregistrement)=> {
-                    console.log("enregistrement OK, scope : ", enregistrement.scope)
-                })
-                .catch((error)=>{
-                    console.error("fail !", error)
-                })
-            }
-/*             if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('serviceworker.js')
-                .then(registration => {
-                    console.log('Registration successful with scope: ', registration.scope)
-                }).catch(err => {
-                    console.log('Registration failed: ', err)
-                })
-            })
-        }       */
- </script>
+        <script src="behaviors.js"></script>
     </body>
 </html>

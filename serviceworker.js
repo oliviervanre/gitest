@@ -8,19 +8,23 @@ self.addEventListener('install', (installEvent) => {
         .then(staticCache => {
             // fichiers souhaités en cache
             staticCache.addAll([
-                'assets/font.txt',
-                'assets/icon.txt'
+                "assets/font.txt",
+                "assets/icon.txt"
             ])
             console.log('mise en cache des fichiers, SW installé dans la version ' + version)
             // fichiers à mettre impérativement en cache
             return staticCache.addAll([
-                'css/stylesheet.css',
-                'js/javascript.js',
-                'offline.html'
+                "css/stylesheet.css",
+                "js/javascript.js",
+                "offline.html",
+                "manifest.json"
             ])
         })
     )
 })
+   
+
+
 addEventListener('activate', (activateEvent) => {
     console.log('Le service worker est activé')
     activateEvent.waitUntil(
@@ -57,3 +61,5 @@ addEventListener('fetch', fetchEvent => {
         })
     )
 })
+
+
